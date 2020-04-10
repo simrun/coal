@@ -6,3 +6,6 @@ xlrd
 # Getting tiles from Mapbox
 mercantile
 requests
+
+# Progress bar
+tqdm
