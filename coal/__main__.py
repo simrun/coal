@@ -8,10 +8,10 @@ from tqdm import tqdm
 
 import tiles
 
-# ENO is the Entity Number defined by Geoscience Australia
 mines = pd.read_excel("data/operating_mines_feb2015.xlsx")
 
 for _, mine in tqdm(mines.iterrows(), total=len(mines)):
+    # ENO is the Entity Number defined by Geoscience Australia
     ENO = mine.loc["ENO"]
     long = mine.loc["Longitude"]
     lat = mine.loc["Latitude"]
