@@ -1,3 +1,8 @@
+# Reading Excel
 numpy
 pandas
 xlrd
+
+# Getting tiles from Mapbox
+mercantile
+requests
