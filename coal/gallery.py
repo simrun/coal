@@ -2,7 +2,7 @@ import shutil
 
 from bs4 import BeautifulSoup
 
-import mines, tiles
+from . import mines, tiles
 
 if __name__ == "__main__":
     gallery_file = "index.html"

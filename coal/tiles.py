@@ -6,7 +6,7 @@ import requests
 
 from tqdm import tqdm
 
-import mines
+from . import mines
 
 zoom = 10
 
