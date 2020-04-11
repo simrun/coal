@@ -1,20 +1,15 @@
-import shutil
-
 from bs4 import BeautifulSoup
 
 from . import mines, tiles
 
 if __name__ == "__main__":
-    gallery_file = "index.html"
-    shutil.copyfile("index.html.template", gallery_file)
-
-    with open(gallery_file, "r") as f:
-        gallery_soup = BeautifulSoup(f, features="html.parser")
+    with open("index.html.template", "r") as f:
+        soup = BeautifulSoup(f, features="html.parser")
 
     for _, mine in mines.coal_mines.iterrows():
         ENO = mine["ENO"]
-        img_tag = gallery_soup.new_tag("img", src=f"{tiles.path}/{ENO}.jpg")
-        gallery_soup.body.append(img_tag)
+        img_tag = soup.new_tag("img", src=f"{tiles.path}/{ENO}.jpg")
+        soup.body.append(img_tag)
 
-    with open(gallery_file, "w") as f:
-        f.write(gallery_soup.prettify())
+    with open("index.html", "w") as f:
+        f.write(soup.prettify())
