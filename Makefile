@@ -5,10 +5,10 @@ pyfiles = coal/*.py
 
 .PHONY: gallery
 gallery: index.html
-index.html: $(pyfiles) tiles
+index.html: $(pyfiles) tiles index.html.template
 	python -m coal.gallery
 
-tiles: $(pyfiles)
+tiles: coal/tiles.py coal/mines.py
 	python -m coal.tiles
 	touch tiles
 
