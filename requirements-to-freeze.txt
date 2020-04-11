@@ -9,3 +9,6 @@ requests
 
 # Progress bar
 tqdm
+
+# HTML
+beautifulsoup4
