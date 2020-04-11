@@ -9,7 +9,7 @@ if __name__ == "__main__":
     shutil.copyfile("index.html.template", gallery_file)
 
     with open(gallery_file, "r") as f:
-        gallery_soup = BeautifulSoup(f)
+        gallery_soup = BeautifulSoup(f, features="html.parser")
 
     for _, mine in mines.coal_mines.iterrows():
         ENO = mine["ENO"]
