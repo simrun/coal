@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 
-from . import mines, tiles
+from . import config, mines, tiles
 
 if __name__ == "__main__":
     with open("index.html.template", "r") as f:
@@ -11,5 +11,5 @@ if __name__ == "__main__":
         img_tag = soup.new_tag("img", src=f"{tiles.path}/{ENO}.jpg")
         soup.body.append(img_tag)
 
-    with open("index.html", "w") as f:
+    with open(f"{config.web_root}/index.html", "w") as f:
         f.write(soup.prettify())

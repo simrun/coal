@@ -1,17 +1,19 @@
 include .env
 export MAPBOX_TOKEN
 
+web_root = public
+
 pyfiles = coal/*.py
 
 .PHONY: gallery
-gallery: index.html
-index.html: $(pyfiles) tiles index.html.template
+gallery: $(web_root)/index.html
+$(web_root)/index.html: $(pyfiles) $(web_root)/tiles index.html.template
 	python -m coal.gallery
 
-tiles: coal/tiles.py coal/mines.py
+$(web_root)/tiles: coal/config.py coal/tiles.py coal/mines.py
 	python -m coal.tiles
-	touch tiles
+	touch $(web_root)/tiles
 
 .PHONY: clean
 clean:
-	rm -rf tiles index.html
+	rm -rf $(web_root)/tiles $(web_root)/index.html
