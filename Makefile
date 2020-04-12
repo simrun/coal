@@ -1,6 +1,3 @@
-include .env
-export MAPBOX_TOKEN
-
 web_root = public
 
 pyfiles = coal/*.py
