@@ -13,6 +13,7 @@ gallery:
 	mkdir -p $(web_root)
 	python -m coal.gallery
 	cp templates/style.css $(web_root)
+	cp templates/about.html $(web_root)
 
 .PHONY: clean
 clean:
