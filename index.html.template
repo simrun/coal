@@ -4,5 +4,7 @@
 	<meta charset="utf-8">
 	<title>Coal</title>
 </head>
-<body></body>
+<body>
+	<div id="header"><a href="about.html">About</a><h1></h1></div>
+</body>
 </html>
