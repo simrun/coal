@@ -8,7 +8,7 @@ from tqdm import tqdm
 
 from . import config, mines
 
-zoom = 10
+zoom = 11
 path = f"tiles/{zoom}"
 
 def get_tile(long, lat, zoom):
