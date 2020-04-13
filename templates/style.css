@@ -1,5 +1,23 @@
+:root {
+    --text-color: silver;
+}
+
 body {
     font-family: sans-serif;
+    color: var(--text-color);
+    background-color: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link, a:visited {
+    color: var(--text-color);
+}
+
+header a {
+    margin-left: 5%;
 }
 
 header {
@@ -19,7 +37,7 @@ header::after {
 main {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1vw;
+    grid-gap: 0.4vw;
 }
 
 img {
