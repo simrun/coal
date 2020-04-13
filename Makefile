@@ -12,7 +12,7 @@ tiles:
 gallery:
 	mkdir -p $(web_root)
 	python -m coal.gallery
-	cp style.css $(web_root)
+	cp templates/style.css $(web_root)
 
 .PHONY: clean
 clean:

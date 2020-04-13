@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 from . import config, mines, tiles
 
 if __name__ == "__main__":
-    with open("index.html.template", "r") as f:
+    with open("templates/index.html", "r") as f:
         soup = BeautifulSoup(f, features="html.parser")
 
     for _, mine in mines.coal_mines.iterrows():
