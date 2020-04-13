@@ -1,17 +1,19 @@
 web_root = public
 
-pyfiles = coal/*.py
+.PHONY: all
+all: tiles gallery
+
+.PHONY: tiles
+tiles:
+	mkdir -p $(web_root)
+	python -m coal.tiles
 
 .PHONY: gallery
-gallery: $(web_root)/index.html
-$(web_root)/index.html: $(pyfiles) $(web_root)/tiles index.html.template style.css
+gallery:
+	mkdir -p $(web_root)
 	python -m coal.gallery
 	cp style.css $(web_root)
 
-$(web_root)/tiles: coal/config.py coal/tiles.py coal/mines.py
-	python -m coal.tiles
-	touch $(web_root)/tiles
-
 .PHONY: clean
 clean:
-	rm -rf $(web_root)/*
+	rm -rf $(web_root)
