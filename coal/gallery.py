@@ -8,7 +8,7 @@ if __name__ == "__main__":
 
     for _, mine in mines.coal_mines.iterrows():
         ENO = mine["ENO"]
-        img_tag = soup.new_tag("img", src=f"{tiles.path}/{ENO}.jpg")
+        img_tag = soup.new_tag("img", src=f"{tiles.path}/{ENO}.jpg", width="512px", height="512px")
         soup.find("main").append(img_tag)
 
     soup.find("h1").string = str(len(mines.coal_mines)) + " Australian coal mines"
