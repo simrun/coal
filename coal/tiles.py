@@ -20,7 +20,10 @@ def get_tile(long, lat, zoom):
     token = os.getenv("MAPBOX_TOKEN")
     url = base_path + f"/v4/{tileset_id}/{zoom}/{x}/{y}@2x.{format}" + f"?access_token={token}"
 
-    return requests.get(url).content
+    response = requests.get(url)
+    response.raise_for_status()
+
+    return response.content
 
 if __name__ == "__main__":
     pathlib.Path(f"{config.web_root}/{path}").mkdir(parents=True, exist_ok=True)
