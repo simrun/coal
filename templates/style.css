@@ -8,16 +8,13 @@ body {
     background-color: black;
 }
 
-a {
-    text-decoration: none;
-}
-
-a:link, a:visited {
-    color: var(--text-color);
-}
-
 header a {
+    text-decoration: none;
     margin-left: 5%;
+}
+
+header a:link, a:visited {
+    color: var(--text-color);
 }
 
 header {
@@ -34,12 +31,12 @@ header::after {
     flex: 1
 }
 
-main {
+#gallery {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 0.4vw;
 }
 
-img {
+#gallery img {
     width: 100%;
 }

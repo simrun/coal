@@ -11,7 +11,5 @@ if __name__ == "__main__":
         img_tag = soup.new_tag("img", src=f"{tiles.path}/{ENO}.jpg")
         soup.find("main").append(img_tag)
 
-    soup.find("h1").string = "Extracting coal from the earth"
-
     with open(f"{config.web_root}/index.html", "w") as f:
         f.write(soup.prettify())
