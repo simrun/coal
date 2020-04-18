@@ -40,3 +40,7 @@ header::after {
 #gallery img {
     width: 100%;
 }
+
+.footnotes .footnote-backlink::after {
+    content: "⏎"
+}
