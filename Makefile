@@ -14,6 +14,7 @@ gallery:
 	python -m coal.gallery
 	cp templates/style.css $(web_root)
 	cp templates/about.html $(web_root)
+	cp templates/coal-in-parliament.jpg $(web_root)
 
 .PHONY: clean
 clean:
