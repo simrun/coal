@@ -41,6 +41,13 @@ header::after {
     width: 100%;
 }
 
+.ref {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
 .footnotes .footnote-backlink::after {
     content: "⏎"
 }
