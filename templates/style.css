@@ -10,7 +10,6 @@ body {
 
 header a {
     text-decoration: none;
-    margin-left: 5%;
 }
 
 header a:link, a:visited {
@@ -24,11 +23,20 @@ header {
 
 header > div {
     flex: 1;
+    display: flex;
+    align-items: center;
 }
 
-header::after {
-    content: '';
-    flex: 1
+header #left a{
+    margin-left: 2em;
+}
+
+header #right {
+    justify-content: flex-end;
+}
+
+header #right a{
+    margin-right: 2em;
 }
 
 #gallery {
