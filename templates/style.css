@@ -12,7 +12,7 @@ header a {
     text-decoration: none;
 }
 
-header a:link, a:visited {
+header a:link, header a:visited {
     color: var(--text-color);
 }
 
