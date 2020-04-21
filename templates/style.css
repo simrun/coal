@@ -16,6 +16,10 @@ header a:link, header a:visited {
     color: var(--text-color);
 }
 
+header a:hover {
+    color: white;
+}
+
 header {
     display: flex;
     align-items: center;
