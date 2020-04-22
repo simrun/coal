@@ -8,6 +8,10 @@ body {
     background-color: black;
 }
 
+a:link, a:visited {
+    color: var(--text-color);
+}
+
 header a {
     text-decoration: none;
 }
