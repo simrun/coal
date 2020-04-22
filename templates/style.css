@@ -12,16 +12,12 @@ a:link, a:visited {
     color: var(--text-color);
 }
 
+a:hover {
+    color: white;
+}
+
 header a {
     text-decoration: none;
-}
-
-header a:link, header a:visited {
-    color: var(--text-color);
-}
-
-header a:hover {
-    color: white;
 }
 
 header {
@@ -57,11 +53,54 @@ header #right a{
     width: 100%;
 }
 
+#about {
+    max-width: 35em;
+    margin: auto;
+    padding-bottom: 1vh;
+}
+
+hr {
+    width: 10%;
+    margin: 1.5em auto;
+}
+
+.image {
+    margin: 20px;
+}
+
+.image img {
+    width: 100%;
+}
+
+figcaption {
+    text-align: right;
+}
+
+.quote {
+    margin: 0;
+}
+
+.quote blockquote {
+    font-style: italic;
+}
+
+.quote figcaption {
+    margin-right: 80px;
+}
+
 .ref {
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
+}
+
+.footnotes li {
+    margin: 0.5em auto;
+}
+
+.footnotes .footnote-backlink {
+    text-decoration: none;
 }
 
 .footnotes .footnote-backlink::after {
