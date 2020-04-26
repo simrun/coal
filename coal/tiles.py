@@ -8,8 +8,7 @@ from tqdm import tqdm
 
 from . import config, mines
 
-zoom = 11
-path = f"tiles/{zoom}"
+path = "tiles"
 
 def get_tile(long, lat, zoom):
     x, y, zoom = mercantile.tile(long, lat, zoom)
@@ -32,6 +31,7 @@ if __name__ == "__main__":
         ENO = mine["ENO"]
         long = mine["Longitude"]
         lat = mine["Latitude"]
+        zoom = mine["Zoom"]
         
         with open(f"{config.web_root}/{path}/{ENO}.jpg", "bw") as f:
             f.write(get_tile(long, lat, zoom))
