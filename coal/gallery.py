@@ -11,7 +11,7 @@ if __name__ == "__main__":
     with open("templates/index.html", "r") as f:
         soup = BeautifulSoup(f, features="html.parser")
 
-    top_row = [335034, 334089, 334195]
+    top_row = [335034, 334708, 334195]
 
     for ENO in top_row:
         mine = mines.coal_mines[mines.coal_mines["ENO"] == ENO].squeeze()
