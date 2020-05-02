@@ -49,8 +49,16 @@ header #right a{
 
 #gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 0.4vw;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1vw;
+}
+
+@media (min-width: 1000px) {
+    #gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 0.9vw;
+    }
 }
 
 #gallery img {
