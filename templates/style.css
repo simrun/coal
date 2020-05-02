@@ -59,7 +59,7 @@ header #right a{
     #gallery {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-gap: 0.9vw;
+        grid-gap: 0.7vw;
     }
 }
 
