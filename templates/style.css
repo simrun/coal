@@ -67,6 +67,15 @@ header #right a{
     header > div {
         flex: 1;
     }
+
+    header a {
+        font-size: 1.1em;
+    }
+
+    h1 {
+        font-size: 3em;
+        margin: 0.5em;
+    }
 }
 
 #gallery {
