@@ -56,6 +56,18 @@ header #right a{
     margin-right: 4vw;
 }
 
+@media (min-width: 500px) {
+    header {
+        display: flex;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    header > div {
+        flex: 1;
+    }
+}
+
 #gallery {
     display: grid;
     grid-template-columns: 1fr;
