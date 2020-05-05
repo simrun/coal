@@ -116,7 +116,11 @@ hr {
 }
 
 .image {
-    margin: 20px;
+    margin: auto auto 1em auto;
+}
+
+.image figcaption small {
+    font-size: xx-small;
 }
 
 .image img {
@@ -133,10 +137,29 @@ figcaption {
 
 .quote blockquote {
     font-style: italic;
+    margin: auto 1em;
 }
 
 .quote figcaption {
-    margin-right: 80px;
+    margin-right: 1em;
+}
+
+@media (min-width: 600px) {
+    .image {
+        margin: auto 1em;
+    }
+
+    .image figcaption small {
+        font-size: x-small
+    }
+
+    .quote blockquote {
+        margin: auto 3em;
+    }
+
+    .quote figcaption {
+        margin-right: 3em;
+    }
 }
 
 .ref {
