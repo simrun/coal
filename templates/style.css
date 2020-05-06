@@ -179,6 +179,7 @@ figcaption {
 
 .footnotes .footnote-backlink {
     text-decoration: none;
+    font-size: smaller;
 }
 
 .footnotes .footnote-backlink::after {
