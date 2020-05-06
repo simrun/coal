@@ -9,3 +9,5 @@ coal_mines = pd.merge(coal_mines, curation, how='left', on="ENO", validate="1:1"
 
 coal_mines = coal_mines[coal_mines["Interest"].isin({"High", "Med"})]
 coal_mines = coal_mines[coal_mines["Dupe"] != "Yes"]
+
+coal_mines = coal_mines.sample(frac=1, random_state=8)
