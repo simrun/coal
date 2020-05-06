@@ -169,6 +169,10 @@ figcaption {
     -ms-user-select: none;
 }
 
+.footnotes {
+    padding-left: 2em;
+}
+
 .footnotes li {
     margin: 0.5em auto;
 }
