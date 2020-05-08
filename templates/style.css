@@ -109,6 +109,10 @@ header #left #fixed {
     }
 }
 
+#gallery figure {
+    margin: 0;
+}
+
 #gallery img {
     width: 100%;
 }
