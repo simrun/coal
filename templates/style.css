@@ -84,7 +84,8 @@ header #left #fixed {
     background: rgba(0, 0, 0, 0.6);
     padding: 0.5em 0.8em;
     border-radius: 5px;
-    margin-left: calc(var(--link-margin) - 0.8em)
+    margin-left: calc(var(--link-margin) - 0.8em);
+    z-index: 10;
 }
 
 #gallery {
@@ -111,19 +112,23 @@ header #left #fixed {
 
 #gallery figure {
     margin: 0;
+    position: relative;
 }
 
 #gallery img {
     width: 100%;
+    display: block;
 }
 
 #gallery figcaption {
-	display: flex;
-	justify-content: space-between;
-}
-
-#gallery figcaption p {
-    margin: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 0.15em 0.4em 0.1em 0.3em;
+    font-size: smaller;
+    filter: brightness(0.9);
 }
 
 #about {
