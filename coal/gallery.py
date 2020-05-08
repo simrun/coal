@@ -9,7 +9,15 @@ def add_tile(soup, mine):
     fig_tag.append(img_tag)
 
     caption_tag = soup.new_tag("figcaption")
-    caption_tag.string = mine["Name"]
+    
+    name_tag = soup.new_tag("p", attrs={"class": "name"})
+    name_tag.string = mine["Name"]
+    caption_tag.append(name_tag)
+
+    state_tag = soup.new_tag("p", attrs={"class": "state"})
+    state_tag.string = mine["State"]
+    caption_tag.append(state_tag)
+
     fig_tag.append(caption_tag)
 
     soup.find("main").append(fig_tag)
