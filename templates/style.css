@@ -124,19 +124,19 @@ hr {
     margin: 1.5em auto;
 }
 
-.image {
+#about .image {
     margin: auto auto 1em auto;
 }
 
-.image figcaption small {
+#about .image figcaption small {
     font-size: xx-small;
 }
 
-.image img {
+#about .image img {
     width: 100%;
 }
 
-figcaption {
+#about .image figcaption {
     text-align: right;
 }
 
