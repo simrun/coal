@@ -3,9 +3,16 @@ from bs4 import BeautifulSoup
 from . import config, mines, tiles
 
 def add_tile(soup, mine):
-    ENO = mine["ENO"]
-    img_tag = soup.new_tag("img", src=f"{tiles.path}/{ENO}.jpg")
-    soup.find("main").append(img_tag)
+    fig_tag = soup.new_tag("figure", id=mine["ENO"])
+
+    img_tag = soup.new_tag("img", src=f"{tiles.path}/{mine['ENO']}.jpg")
+    fig_tag.append(img_tag)
+
+    caption_tag = soup.new_tag("figcaption")
+    caption_tag.string = mine["Name"]
+    fig_tag.append(caption_tag)
+
+    soup.find("main").append(fig_tag)
 
 if __name__ == "__main__":
     with open("templates/index.html", "r") as f:
