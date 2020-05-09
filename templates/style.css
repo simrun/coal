@@ -160,7 +160,7 @@ hr {
     width: 100%;
 }
 
-#about .image figcaption {
+#about figcaption {
     text-align: right;
 }
 
@@ -178,11 +178,11 @@ hr {
 }
 
 @media (min-width: 600px) {
-    .image {
+    #about .image {
         margin: auto 1em;
     }
 
-    .image figcaption small {
+    #about .image figcaption small {
         font-size: x-small
     }
 
