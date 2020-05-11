@@ -32,4 +32,4 @@ if __name__ == "__main__":
         add_tile(soup, mine)
         
     with open(f"{config.web_root}/index.html", "w") as f:
-        f.write(soup.prettify())
+        f.write(str(soup))
