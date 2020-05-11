@@ -2,10 +2,12 @@ from bs4 import BeautifulSoup
 
 from . import config, mines, tiles
 
-def add_tile(soup, mine):
+def add_tile(soup, mine, lazy=False):
     fig_tag = soup.new_tag("figure", id=mine["ENO"])
 
     img_tag = soup.new_tag("img", src=f"{tiles.path}/{mine['ENO']}.jpg")
+    if lazy:
+        img_tag["loading"] = "lazy"
     fig_tag.append(img_tag)
 
     caption_tag = soup.new_tag("figcaption")
@@ -29,7 +31,7 @@ if __name__ == "__main__":
 
     for _, mine in rest_of_mines.sort_values("Interest").iterrows():
         # Sorting gives us "High" interest mines first
-        add_tile(soup, mine)
+        add_tile(soup, mine, lazy=True)
         
     with open(f"{config.web_root}/index.html", "w") as f:
         f.write(str(soup))
