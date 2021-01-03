@@ -1,3 +1,8 @@
+# This is coal.
+
+Hosted at https://coal.sim.run 🌏
+
+## Build instructions
 ```
 $ pip install -r requirements.txt
 
